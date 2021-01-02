@@ -21,10 +21,6 @@ module.exports = {
       short_name: 'Almanax',
       orientation: 'portrait',
       themeColor: '#f5c20a'
-    },
-    workboxPluginMode: 'InjectManifest',
-    workboxOptions: {
-      swSrc: 'dev/sw.js'
     }
   }
 };
