@@ -1,0 +1,327 @@
+html, body {
+  height: 100%;
+  background-image: url(./assets/nebulosa.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+::selection {
+  background: #ffe905;
+}
+#app {
+  background: transparent;
+}
+
+.logobg {
+  background: url(./assets/cloud2.png), url(./assets/cloud1.png), url(./assets/monster-quest-hand.png) center;
+  background-size: auto 100%;
+}
+.logobg img {
+  vertical-align: middle;
+}
+.logo {
+  max-width: 100%;
+  max-height: 114px;
+}
+
+.mes {
+  position: relative;
+}
+
+.mes .cima{
+  background: transparent url(./assets/bg_almanax.png) center 0 no-repeat;
+  height: 357px;
+  width: 608px;
+  position: relative;
+  cursor: pointer;
+}
+.mes.verao .cima {
+  background-image: url(./assets/bg_almanax_summer.png);
+}
+.mes.inverno .cima {
+  background-image: url(./assets/bg_almanax_winter.png);
+}
+.mes.primavera .cima {
+  background-image: url(./assets/bg_almanax_spring.png);
+}
+
+.mes .protetor {
+  background: transparent url(./assets/clock_autumn.png) top center no-repeat;
+  position: absolute;
+  left: 210px;
+  top: 67px;
+  width: 191px;
+  height: 181px;
+  z-index: 2;
+}
+.mes.verao .protetor {
+  background-image: url(./assets/clock_summer.png);
+}
+.mes.inverno .protetor {
+  background-image: url(./assets/clock_winter.png);
+}
+.mes.primavera .protetor {
+  background-image: url(./assets/clock_spring.png);
+}
+.mes .protetor img {
+  position: absolute;
+  top: 22px;
+  left: 32px;
+  border-radius: 9999px;
+}
+
+.mes .zodiaco {
+  position: absolute;
+  top: 101px;
+  width: 128px;
+  height: 128px;
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.mes .zodiaco.direita {
+  right: 113px;
+}
+.mes .zodiaco.esquerda {
+  left: 114px;
+}
+
+.mes .meio{
+  background: transparent url(./assets/bg-r-autumn.png) center 0 repeat-y;
+  height: 60px;
+  width: 608px;
+  position: relative;
+  margin: -2px 0;
+}
+.mes.verao .meio {
+  background-image: url(./assets/bg-r-summer.png);
+}
+.mes.inverno .meio {
+  background-image: url(./assets/bg-r-winter.png);
+}
+.mes.primavera .meio {
+  background-image: url(./assets/bg-r-spring.png);
+}
+
+.mes .baixo{
+  background: transparent url(./assets/bg_almanax.png) center bottom no-repeat;
+  height: 212px;
+  width: 608px;
+  position: relative;
+}
+.mes.verao .baixo {
+  background-image: url(./assets/bg_almanax_summer.png);
+}
+.mes.inverno .baixo {
+  background-image: url(./assets/bg_almanax_winter.png);
+}
+.mes.primavera .baixo {
+  background-image: url(./assets/bg_almanax_spring.png);
+}
+
+.estacao {
+  background: transparent url(./assets/seasons.png) 2px 0 no-repeat;
+  height: 78px;
+  width: 78px;
+}
+.verao .estacao {
+  background-position: -235px 0 !important;
+}
+.inverno .estacao {
+  background-position: -77px 0 !important;
+}
+.primavera .estacao {
+  background-position: -156px 0 !important;
+}
+.mes .estacao {
+  position: absolute;
+  top: 190px;
+  left: 262px;
+  z-index: 20;
+}
+
+.mes .proximo {
+  background: transparent url(./assets/nav-autumn.png) -4px 0 no-repeat;
+  background-position: -78px 0 !important;
+  height: 73px;
+  width: 40px;
+  position: absolute;
+  top: 123px;
+  right: 70px;
+  cursor: pointer;
+}
+.mes.verao .proximo {
+  background: transparent url(./assets/nav-summer.png) -4px 0 no-repeat
+}
+.mes.inverno .proximo {
+  background: transparent url(./assets/nav-winter.png) -4px 0 no-repeat
+}
+.mes.primavera .proximo {
+  background: transparent url(./assets/nav-spring.png) -4px 0 no-repeat
+}
+.mes .proximo:hover {
+  background-position: -78px -73px !important;
+}
+
+.mes .anterior {
+  background: transparent url(./assets/nav-autumn.png) -4px 0 no-repeat;
+  height: 73px;
+  width: 40px;
+  position: absolute;
+  top: 123px;
+  left: 70px;
+  cursor: pointer;
+}
+.mes.verao .anterior {
+  background: transparent url(./assets/nav-summer.png) -4px 0 no-repeat
+}
+.mes.inverno .anterior {
+  background: transparent url(./assets/nav-winter.png) -4px 0 no-repeat
+}
+.mes.primavera .anterior {
+  background: transparent url(./assets/nav-spring.png) -4px 0 no-repeat
+}
+.mes .anterior:hover {
+  background-position: -4px -73px;
+}
+
+.mes .conteudo {
+  position: absolute;
+  width: 500px;
+  max-width: 100%;
+  height: 375px;
+  left: 53px;
+  top: 240px;
+}
+
+.calendar {
+  width: 100%;
+}
+.v-btn.evento {
+  align-items: start;
+  padding-top: 5px !important;
+}
+.evento span > div {
+  position: absolute;
+  bottom: -15px;
+}
+
+.livro {
+  position: relative;
+  height: 612px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  color: #50392C;
+}
+.livro, .livro .titulo1, .livro .titulo2, .livro .desc {
+  font-family: 'Indie Flower', cursive !important;
+  font-weight: 600;
+}
+.livro .desc {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.livro .titulo2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+.livro .pagina {
+  min-width: 500px;
+  max-width: 500px;
+  height: 100%;
+  background: url(./assets/3.png) left center no-repeat;
+}
+.livro .pagina:last-child {
+  background-position: right center;
+}
+.livro .pagina .v-card__text {
+  margin: 45px;
+  max-height: 520px;
+  max-width: 440px;
+}
+.livro .pagina:last-child .v-card__text {
+  margin-left: 20px;
+  max-width: 430px;
+}
+.livro .fechar {
+  background: url(./assets/x.png) no-repeat;
+  height: 52px;
+  width: 52px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  cursor: pointer;
+}
+.livro .proximo {
+  background: url(./assets/seta2.png) center no-repeat;
+  height: 70px;
+  width: 95px;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  cursor: pointer;
+}
+.livro .proximo:hover {
+  background-position: left center;
+}
+.livro .proximo:active {
+  background-position: right center;
+}
+.livro .anterior {
+  background: url(./assets/seta.png) center no-repeat;
+  height: 70px;
+  width: 95px;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  cursor: pointer;
+}
+.livro .anterior:hover {
+  background-position: left center;
+}
+.livro .anterior:active {
+  background-position: right center;
+}
+.livro > .proximaPagina, .livro > .anteriorPagina {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 200px;
+}
+.livro > .proximaPagina {
+  right: 0;
+}
+.livro > .anteriorPagina {
+  left: 0;
+}
+
+.mes .theme--light.v-picker__body, .mes .theme--light.v-card {
+  background: transparent;
+}
+.mes .v-date-picker-header > button {
+  display: none;
+}
+.mes .v-date-picker-header__value {
+  pointer-events: none;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .v-application .mt-n10.mes {
+    transform: scale(.67);
+    margin-top: -100px !important;
+  }
+  .mes-wrapper {
+    height: 410px;
+  }
+  .livro {
+    transform: scale(.7) translate(-210px, -120px);
+    width: 1000px !important;
+  }
+  .v-dialog {
+    height: 450px !important;
+    overflow-y: hidden !important;
+  }
+}
