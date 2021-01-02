@@ -1,5 +1,5 @@
 import { make } from 'vuex-pathify';
-import json from '@/json/almanaxMOD';
+import json from '@/json/almanax';
 
 const state = {
   ...json,
