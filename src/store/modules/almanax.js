@@ -27,10 +27,9 @@ const actions = {
         };
       }
 
-      ac[month].days.push({
-        ...item,
-        zodiac: zodiacs[item.zodiac]
-      });
+      item.zodiac = zodiacs[item.zodiac];
+      ac[month].days.push(item);
+
       return ac;
     }, {});
 

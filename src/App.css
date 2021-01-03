@@ -278,10 +278,10 @@ html, body {
   bottom: 0;
   cursor: pointer;
 }
-.livro .anterior:hover {
+.livro .anterior:active {
   background-position: left center;
 }
-.livro .anterior:active {
+.livro .anterior:hover {
   background-position: right center;
 }
 .livro > .proximaPagina, .livro > .anteriorPagina {
