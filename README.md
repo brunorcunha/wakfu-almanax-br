@@ -3,13 +3,13 @@
 
 Projeto desenvolvido em VueJS para exibição dos dados do almanax traduzidos para português.
 
-<p style="text-align: center;">
+<p>
   <a href="https://almanax.netlify.app" target="_blank">
     [ Confira a Demo ]
   </a>
 </p>
 
-![screen](https://user-images.githubusercontent.com/3453372/103476667-9844a200-4d96-11eb-8c43-962b13f05b75.png)
+![screen](https://user-images.githubusercontent.com/3453372/103476695-ce822180-4d96-11eb-8f61-05d692dafe07.png)
 
 ## Começando
 
