@@ -65,3 +65,7 @@ npm run build
 ```
 
 O projeto já está configurado para deploy automático na Netlify assim que a Master (branch) é atualizada.
+
+## Contribuição
+
+Você pode ajudar com as traduções abrindo uma Issue e relatando onde e como deveria ser. A tradução foi automatizada com google tradutor, por isso deve haver inconsistências, especialmente nos nomes dos monstros que foram mantidos (por enquanto) em inglês. 
