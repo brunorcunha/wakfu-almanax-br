@@ -22,7 +22,7 @@
           </div>
 
           <div>
-            <div class="pl-2 pr-4 pt-1 float-left">
+            <div class="pl-2 pr-4 pt-1 float-left foto2">
               <img :src="mesSelecionado.protector.img" />
             </div>
             <div class="pt-3">
@@ -38,7 +38,7 @@
       <v-fade-transition leave-absolute>
         <v-card-text v-if="mesSelecionado" :key="`${mesSelecionado.nome}2`">
           <div v-if="mesSelecionado.zodiacs[0] && numero === 1">
-            <div class="pl-2 pt-1 float-right">
+            <div class="pl-2 pt-1 float-right foto">
               <img :src="mesSelecionado.zodiacs[0].img" />
             </div>
             <div class="pt-3">
@@ -57,7 +57,7 @@
           </div>
 
           <div v-if="mesSelecionado.zodiacs[1] && numero === 2">
-            <div class="pl-2 pt-1 float-right">
+            <div class="pl-2 pt-1 float-right foto">
               <img :src="mesSelecionado.zodiacs[1].img" />
             </div>
             <div class="pt-3">
@@ -78,8 +78,18 @@
       </v-fade-transition>
     </template>
 
-    <div class="anterior" @click="anterior"></div>
-    <div class="proximo" @click="proximo"></div>
+    <v-tooltip bottom nudge-top="10" transition="slide-y-transition">
+      <template #activator="{ on, attrs }">
+        <div class="anterior" @click="anterior" v-on="on" v-bind="attrs"></div>
+      </template>
+      <span>Página Anterior</span>
+    </v-tooltip>
+    <v-tooltip bottom nudge-top="10" transition="slide-y-transition">
+      <template #activator="{ on, attrs }">
+        <div class="proximo" @click="proximo" v-on="on" v-bind="attrs"></div>
+      </template>
+      <span>Próxima Página</span>
+    </v-tooltip>
   </Dialog>
 </template>
 

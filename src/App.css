@@ -119,6 +119,21 @@ html, body {
   background-image: url(./assets/bg_almanax_spring.png);
 }
 
+.estacaobg {
+  position: relative;
+  padding-right: 40px;
+}
+.estacaobg:before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -105px;
+  left: -100px;
+  background: url(./assets/stroke.png);
+  background-size: 100% 100%;
+  filter: sepia(1);
+}
 .estacao {
   background: transparent url(./assets/seasons.png) 2px 0 no-repeat;
   height: 78px;
@@ -138,6 +153,9 @@ html, body {
   top: 190px;
   left: 262px;
   z-index: 20;
+}
+.livro .estacao {
+  filter: sepia(0.6);
 }
 
 .mes .proximo {
@@ -306,6 +324,47 @@ html, body {
 .mes .v-date-picker-header__value {
   pointer-events: none;
   font-size: 24px;
+}
+
+.foto, .foto2 {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(4px 2px 3px rgba(0, 0, 0, .3));
+  transform: rotate(-7deg) translateY(10px);
+}
+.foto:before, .foto:after, .foto2:before, .foto2:after {
+  content: '';
+  transform: rotate(34deg);
+  position: absolute;
+  z-index: 1;
+  background: rgba(255, 183, 0, 0.7);
+  width: 60px;
+  height: 20px;
+}
+.foto:before {
+  right: -13px;
+  top: 3px;
+}
+.foto:after {
+  left: 0px;
+  bottom: 10px;
+}
+.foto img, .foto2 img{
+  clip-path: polygon(0% 2%, 2% 2%, 4% 1%, 6% 1%, 8% 2%, 10% 1%, 12% 1%, 14% 0%, 16% 4%, 18% 1%, 20% 1%, 22% 1%, 24% 4%, 26% 1%, 28% 2%, 30% 1%, 32% 4%, 34% 4%, 36% 1%, 38% 2%, 40% 3%, 42% 2%, 44% 2%, 46% 4%, 48% 0%, 50% 4%, 52% 1%, 54% 0%, 56% 2%, 58% 2%, 60% 1%, 62% 1%, 64% 3%, 66% 2%, 68% 1%, 70% 1%, 72% 0%, 74% 2%, 76% 2%, 78% 0%, 80% 1%, 82% 2%, 84% 4%, 86% 0%, 88% 3%, 90% 4%, 92% 3%, 94% 2%, 96% 3%, 98% 3%, 97% 0%, 96% 2%, 99% 4%, 97% 6%, 98% 8%, 99% 10%, 100% 12%, 99% 14%, 96% 16%, 99% 18%, 99% 20%, 96% 22%, 97% 24%, 99% 26%, 96% 28%, 96% 30%, 100% 32%, 99% 34%, 97% 36%, 96% 38%, 98% 40%, 99% 42%, 97% 44%, 97% 46%, 98% 48%, 97% 50%, 99% 52%, 98% 54%, 99% 56%, 98% 58%, 99% 60%, 96% 62%, 98% 64%, 97% 66%, 97% 68%, 99% 70%, 99% 72%, 99% 74%, 99% 76%, 96% 78%, 97% 80%, 97% 82%, 98% 84%, 97% 86%, 97% 88%, 96% 90%, 98% 92%, 99% 94%, 98% 96%, 99% 98%, 100% 100%, 98% 99%, 96% 98%, 94% 100%, 92% 99%, 90% 99%, 88% 97%, 86% 98%, 84% 100%, 82% 98%, 80% 99%, 78% 97%, 76% 98%, 74% 100%, 72% 99%, 70% 96%, 68% 97%, 66% 100%, 64% 98%, 62% 98%, 60% 98%, 58% 99%, 56% 97%, 54% 98%, 52% 100%, 50% 99%, 48% 98%, 46% 97%, 44% 98%, 42% 97%, 40% 99%, 38% 96%, 36% 99%, 34% 97%, 32% 99%, 30% 98%, 28% 98%, 26% 100%, 24% 96%, 22% 98%, 20% 99%, 18% 96%, 16% 97%, 14% 97%, 12% 97%, 10% 96%, 8% 98%, 6% 96%, 4% 98%, 2% 99%, 1% 100%, 2% 98%, 0% 96%, 1% 94%, 0% 92%, 1% 90%, 3% 88%, 4% 86%, 0% 84%, 1% 82%, 1% 80%, 3% 78%, 2% 76%, 1% 74%, 2% 72%, 3% 70%, 2% 68%, 3% 66%, 4% 64%, 3% 62%, 2% 60%, 4% 58%, 1% 56%, 1% 54%, 3% 52%, 2% 50%, 4% 48%, 0% 46%, 2% 44%, 1% 42%, 2% 40%, 3% 38%, 0% 36%, 3% 34%, 1% 32%, 0% 30%, 2% 28%, 3% 26%, 1% 24%, 0% 22%, 3% 20%, 4% 18%, 4% 16%, 1% 14%, 4% 12%, 2% 10%, 1% 8%, 1% 6%, 1% 4%, 3% 2%);
+}
+.foto2 {
+  transform: rotate(3deg);
+  filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, .3));
+}
+.foto2:before {
+  left: -7px;
+  top: 8px;
+  transform: rotate(-34deg);
+}
+.foto2:after {
+  right: 6px;
+  bottom: 8px;
+  transform: rotate(-22deg);
 }
 
 @media only screen and (max-width: 1000px) {

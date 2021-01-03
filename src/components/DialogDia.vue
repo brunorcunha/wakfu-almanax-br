@@ -9,7 +9,7 @@
             {{ ano }}
           </h1>
 
-          <div :class="`${estacao} float-right ma-3`">
+          <div :class="`estacaobg ${estacao} float-right ma-3`">
             <div class="estacao"></div>
           </div>
 
@@ -43,7 +43,7 @@
           :key="`${diaSelecionado.data.day}-2`"
         >
           <div v-if="diaSelecionado.event">
-            <div class="pl-4 float-right">
+            <div class="pl-4 float-right foto">
               <img :src="diaSelecionado.event.img" width="120" />
             </div>
             <div class="pt-3">
@@ -62,8 +62,18 @@
       </v-fade-transition>
     </template>
 
-    <div class="anterior" @click="anterior"></div>
-    <div class="proximo" @click="proximo"></div>
+    <v-tooltip bottom nudge-top="10" transition="slide-y-transition">
+      <template #activator="{ on, attrs }">
+        <div class="anterior" @click="anterior" v-on="on" v-bind="attrs"></div>
+      </template>
+      <span>Página Anterior</span>
+    </v-tooltip>
+    <v-tooltip bottom nudge-top="10" transition="slide-y-transition">
+      <template #activator="{ on, attrs }">
+        <div class="proximo" @click="proximo" v-on="on" v-bind="attrs"></div>
+      </template>
+      <span>Próxima Página</span>
+    </v-tooltip>
   </Dialog>
 </template>
 

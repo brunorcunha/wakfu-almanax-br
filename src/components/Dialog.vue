@@ -6,7 +6,12 @@
     content-class="elevation-0 ma-0"
   >
     <div class="livro" v-touch="{ left: swipeLeft, right: swipeRight }">
-      <div @click="fechar" class="fechar"></div>
+      <v-tooltip bottom nudge-top="10" transition="slide-y-transition">
+        <template #activator="{ on, attrs }">
+          <div @click="fechar" class="fechar" v-on="on" v-bind="attrs"></div>
+        </template>
+        <span>Fechar</span>
+      </v-tooltip>
       <div class="proximaPagina" v-intersect="onIntersectProximo"></div>
       <div class="anteriorPagina" v-intersect="onIntersectAnterior"></div>
       <slot />
