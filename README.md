@@ -65,3 +65,13 @@ npm run build
 ```
 
 O projeto já está configurado para deploy automático na Netlify assim que a Master (branch) é atualizada.
+
+## Contribuição
+
+Você pode ajudar com as traduções abrindo uma Issue e relatando onde e como deveria ser. A tradução foi automatizada com google tradutor, por isso deve haver inconsistências, especialmente nos nomes dos monstros que foram mantidos (por enquanto) em inglês. 
+
+## API
+
+Se tem interesse em usar os dados traduzidos e quer mantê-los atualizados conforme o projeto avançar, você pode usar o link abaixo como uma API. Sempre que os dados mudarem, sua aplicação se manterá atualizada.
+
+https://raw.githubusercontent.com/brunorcunha/wakfu-almanax-br/master/src/json/almanax.json
