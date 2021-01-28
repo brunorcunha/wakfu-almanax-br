@@ -75,3 +75,4 @@ Você pode ajudar com as traduções abrindo uma Issue e relatando onde e como d
 Se tem interesse em usar os dados traduzidos e quer mantê-los atualizados conforme o projeto avançar, você pode usar o link abaixo como uma API. Sempre que os dados mudarem, sua aplicação se manterá atualizada.
 
 https://raw.githubusercontent.com/brunorcunha/wakfu-almanax-br/master/src/json/almanax.json
+
